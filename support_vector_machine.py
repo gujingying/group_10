@@ -2,14 +2,10 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
-from sklearn.metrics import matthews_corrcoef
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from sklearn.metrics import f1_score
 
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
-from sklearn.neighbors import KNeighborsClassifier
 
 
 def cross_validation_svm(n, k, data, c):
