@@ -47,8 +47,6 @@ class SVM:
         xtest_svm_temp = df_xtest_svm.iloc[:, :con_size]
 
         # Normalization
-        # xtrain_svm_temp = StandardScaler().fit_transform(xtrain_svm_temp)
-        # xtest_svm_temp = StandardScaler().fit_transform(xtest_svm_temp)
         xtrain_svm_temp = xtrain_svm_temp.apply(lambda x: (x - np.mean(x)) / np.std(x, ddof=1))
         xtest_svm_temp = xtest_svm_temp.apply(lambda x: (x - np.mean(x)) / np.std(x, ddof=1))
 
